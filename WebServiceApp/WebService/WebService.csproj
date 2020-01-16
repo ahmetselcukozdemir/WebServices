@@ -121,6 +121,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Identification.cs" />
     <Compile Include="Models\DbStokContext.cs" />
     <Compile Include="Models\Kategoriler.cs" />
     <Compile Include="Models\Mapping\KategorilerMap.cs" />

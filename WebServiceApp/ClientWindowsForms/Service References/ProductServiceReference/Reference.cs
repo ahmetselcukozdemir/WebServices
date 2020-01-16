@@ -8,343 +8,334 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClientWindowsForms.ProductServiceReference {
-    using System.Runtime.Serialization;
-    using System;
-    
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ProductDTO", Namespace="http://tempuri.org/")]
+namespace ClientWindowsForms.ProductServiceReference
+{
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName = "ProductServiceReference.ProductServiceSoap")]
+    public interface ProductServiceSoap
+    {
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/HelloWorld", ReplyAction = "*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        string HelloWorld();
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/HelloWorld", ReplyAction = "*")]
+        System.Threading.Tasks.Task<string> HelloWorldAsync();
+
+        // CODEGEN: Generating message contract since message ProductListRequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/ProductList", ReplyAction = "*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        ClientWindowsForms.ProductServiceReference.ProductListResponse ProductList(ClientWindowsForms.ProductServiceReference.ProductListRequest request);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/ProductList", ReplyAction = "*")]
+        System.Threading.Tasks.Task<ClientWindowsForms.ProductServiceReference.ProductListResponse> ProductListAsync(ClientWindowsForms.ProductServiceReference.ProductListRequest request);
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
-    public partial class ProductDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private int urunIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string urunAdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string urunMarkaField;
-        
-        private System.Nullable<short> urunKategoriField;
-        
-        private System.Nullable<decimal> urunFiyatField;
-        
-        private System.Nullable<byte> urunStokField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://tempuri.org/")]
+    public partial class Identification : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
+        private string userNameField;
+
+        private string passwordField;
+
+        private System.Xml.XmlAttribute[] anyAttrField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
+        public string userName
+        {
+            get
+            {
+                return this.userNameField;
             }
-            set {
-                this.extensionDataField = value;
+            set
+            {
+                this.userNameField = value;
+                this.RaisePropertyChanged("userName");
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int urunID {
-            get {
-                return this.urunIDField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
+        public string Password
+        {
+            get
+            {
+                return this.passwordField;
             }
-            set {
-                if ((this.urunIDField.Equals(value) != true)) {
-                    this.urunIDField = value;
-                    this.RaisePropertyChanged("urunID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string urunAd {
-            get {
-                return this.urunAdField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.urunAdField, value) != true)) {
-                    this.urunAdField = value;
-                    this.RaisePropertyChanged("urunAd");
-                }
+            set
+            {
+                this.passwordField = value;
+                this.RaisePropertyChanged("Password");
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string urunMarka {
-            get {
-                return this.urunMarkaField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAnyAttributeAttribute()]
+        public System.Xml.XmlAttribute[] AnyAttr
+        {
+            get
+            {
+                return this.anyAttrField;
             }
-            set {
-                if ((object.ReferenceEquals(this.urunMarkaField, value) != true)) {
-                    this.urunMarkaField = value;
-                    this.RaisePropertyChanged("urunMarka");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public System.Nullable<short> urunKategori {
-            get {
-                return this.urunKategoriField;
-            }
-            set {
-                if ((this.urunKategoriField.Equals(value) != true)) {
-                    this.urunKategoriField = value;
-                    this.RaisePropertyChanged("urunKategori");
-                }
+            set
+            {
+                this.anyAttrField = value;
+                this.RaisePropertyChanged("AnyAttr");
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
-        public System.Nullable<decimal> urunFiyat {
-            get {
-                return this.urunFiyatField;
-            }
-            set {
-                if ((this.urunFiyatField.Equals(value) != true)) {
-                    this.urunFiyatField = value;
-                    this.RaisePropertyChanged("urunFiyat");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
-        public System.Nullable<byte> urunStok {
-            get {
-                return this.urunStokField;
-            }
-            set {
-                if ((this.urunStokField.Equals(value) != true)) {
-                    this.urunStokField = value;
-                    this.RaisePropertyChanged("urunStok");
-                }
-            }
-        }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ProductServiceReference.ProductServiceSoap")]
-    public interface ProductServiceSoap {
-        
-        // CODEGEN: Generating message contract since element name HelloWorldResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
-        ClientWindowsForms.ProductServiceReference.HelloWorldResponse HelloWorld(ClientWindowsForms.ProductServiceReference.HelloWorldRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
-        System.Threading.Tasks.Task<ClientWindowsForms.ProductServiceReference.HelloWorldResponse> HelloWorldAsync(ClientWindowsForms.ProductServiceReference.HelloWorldRequest request);
-        
-        // CODEGEN: Generating message contract since element name ProductListResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProductList", ReplyAction="*")]
-        ClientWindowsForms.ProductServiceReference.ProductListResponse ProductList(ClientWindowsForms.ProductServiceReference.ProductListRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProductList", ReplyAction="*")]
-        System.Threading.Tasks.Task<ClientWindowsForms.ProductServiceReference.ProductListResponse> ProductListAsync(ClientWindowsForms.ProductServiceReference.ProductListRequest request);
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://tempuri.org/")]
+    public partial class ProductDTO : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
+        private int urunIDField;
+
+        private string urunAdField;
+
+        private string urunMarkaField;
+
+        private System.Nullable<short> urunKategoriField;
+
+        private System.Nullable<decimal> urunFiyatField;
+
+        private System.Nullable<byte> urunStokField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
+        public int urunID
+        {
+            get
+            {
+                return this.urunIDField;
+            }
+            set
+            {
+                this.urunIDField = value;
+                this.RaisePropertyChanged("urunID");
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
+        public string urunAd
+        {
+            get
+            {
+                return this.urunAdField;
+            }
+            set
+            {
+                this.urunAdField = value;
+                this.RaisePropertyChanged("urunAd");
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order = 2)]
+        public string urunMarka
+        {
+            get
+            {
+                return this.urunMarkaField;
+            }
+            set
+            {
+                this.urunMarkaField = value;
+                this.RaisePropertyChanged("urunMarka");
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable = true, Order = 3)]
+        public System.Nullable<short> urunKategori
+        {
+            get
+            {
+                return this.urunKategoriField;
+            }
+            set
+            {
+                this.urunKategoriField = value;
+                this.RaisePropertyChanged("urunKategori");
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable = true, Order = 4)]
+        public System.Nullable<decimal> urunFiyat
+        {
+            get
+            {
+                return this.urunFiyatField;
+            }
+            set
+            {
+                this.urunFiyatField = value;
+                this.RaisePropertyChanged("urunFiyat");
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable = true, Order = 5)]
+        public System.Nullable<byte> urunStok
+        {
+            get
+            {
+                return this.urunStokField;
+            }
+            set
+            {
+                this.urunStokField = value;
+                this.RaisePropertyChanged("urunStok");
+            }
+        }
+
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null))
+            {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorld", Namespace="http://tempuri.org/", Order=0)]
-        public ClientWindowsForms.ProductServiceReference.HelloWorldRequestBody Body;
-        
-        public HelloWorldRequest() {
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "ProductList", WrapperNamespace = "http://tempuri.org/", IsWrapped = true)]
+    public partial class ProductListRequest
+    {
+
+        [System.ServiceModel.MessageHeaderAttribute(Namespace = "http://tempuri.org/")]
+        public ClientWindowsForms.ProductServiceReference.Identification Identification;
+
+        public ProductListRequest()
+        {
         }
-        
-        public HelloWorldRequest(ClientWindowsForms.ProductServiceReference.HelloWorldRequestBody Body) {
-            this.Body = Body;
+
+        public ProductListRequest(ClientWindowsForms.ProductServiceReference.Identification Identification)
+        {
+            this.Identification = Identification;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class HelloWorldRequestBody {
-        
-        public HelloWorldRequestBody() {
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "ProductListResponse", WrapperNamespace = "http://tempuri.org/", IsWrapped = true)]
+    public partial class ProductListResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://tempuri.org/", Order = 0)]
+        public ClientWindowsForms.ProductServiceReference.ProductDTO[] ProductListResult;
+
+        public ProductListResponse()
+        {
         }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorldResponse", Namespace="http://tempuri.org/", Order=0)]
-        public ClientWindowsForms.ProductServiceReference.HelloWorldResponseBody Body;
-        
-        public HelloWorldResponse() {
-        }
-        
-        public HelloWorldResponse(ClientWindowsForms.ProductServiceReference.HelloWorldResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class HelloWorldResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string HelloWorldResult;
-        
-        public HelloWorldResponseBody() {
-        }
-        
-        public HelloWorldResponseBody(string HelloWorldResult) {
-            this.HelloWorldResult = HelloWorldResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ProductListRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ProductList", Namespace="http://tempuri.org/", Order=0)]
-        public ClientWindowsForms.ProductServiceReference.ProductListRequestBody Body;
-        
-        public ProductListRequest() {
-        }
-        
-        public ProductListRequest(ClientWindowsForms.ProductServiceReference.ProductListRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class ProductListRequestBody {
-        
-        public ProductListRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ProductListResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ProductListResponse", Namespace="http://tempuri.org/", Order=0)]
-        public ClientWindowsForms.ProductServiceReference.ProductListResponseBody Body;
-        
-        public ProductListResponse() {
-        }
-        
-        public ProductListResponse(ClientWindowsForms.ProductServiceReference.ProductListResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ProductListResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<ClientWindowsForms.ProductServiceReference.ProductDTO> ProductListResult;
-        
-        public ProductListResponseBody() {
-        }
-        
-        public ProductListResponseBody(System.Collections.Generic.List<ClientWindowsForms.ProductServiceReference.ProductDTO> ProductListResult) {
+
+        public ProductListResponse(ClientWindowsForms.ProductServiceReference.ProductDTO[] ProductListResult)
+        {
             this.ProductListResult = ProductListResult;
         }
     }
-    
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ProductServiceSoapChannel : ClientWindowsForms.ProductServiceReference.ProductServiceSoap, System.ServiceModel.IClientChannel {
+    public interface ProductServiceSoapChannel : ClientWindowsForms.ProductServiceReference.ProductServiceSoap, System.ServiceModel.IClientChannel
+    {
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ProductServiceSoapClient : System.ServiceModel.ClientBase<ClientWindowsForms.ProductServiceReference.ProductServiceSoap>, ClientWindowsForms.ProductServiceReference.ProductServiceSoap {
-        
-        public ProductServiceSoapClient() {
+    public partial class ProductServiceSoapClient : System.ServiceModel.ClientBase<ClientWindowsForms.ProductServiceReference.ProductServiceSoap>, ClientWindowsForms.ProductServiceReference.ProductServiceSoap
+    {
+
+        public ProductServiceSoapClient()
+        {
         }
-        
-        public ProductServiceSoapClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
+
+        public ProductServiceSoapClient(string endpointConfigurationName) :
+                base(endpointConfigurationName)
+        {
         }
-        
-        public ProductServiceSoapClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+
+        public ProductServiceSoapClient(string endpointConfigurationName, string remoteAddress) :
+                base(endpointConfigurationName, remoteAddress)
+        {
         }
-        
-        public ProductServiceSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+
+        public ProductServiceSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
+                base(endpointConfigurationName, remoteAddress)
+        {
         }
-        
-        public ProductServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
+
+        public ProductServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
+                base(binding, remoteAddress)
+        {
         }
-        
+
+        public string HelloWorld()
+        {
+            return base.Channel.HelloWorld();
+        }
+
+        public System.Threading.Tasks.Task<string> HelloWorldAsync()
+        {
+            return base.Channel.HelloWorldAsync();
+        }
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ClientWindowsForms.ProductServiceReference.HelloWorldResponse ClientWindowsForms.ProductServiceReference.ProductServiceSoap.HelloWorld(ClientWindowsForms.ProductServiceReference.HelloWorldRequest request) {
-            return base.Channel.HelloWorld(request);
-        }
-        
-        public string HelloWorld() {
-            ClientWindowsForms.ProductServiceReference.HelloWorldRequest inValue = new ClientWindowsForms.ProductServiceReference.HelloWorldRequest();
-            inValue.Body = new ClientWindowsForms.ProductServiceReference.HelloWorldRequestBody();
-            ClientWindowsForms.ProductServiceReference.HelloWorldResponse retVal = ((ClientWindowsForms.ProductServiceReference.ProductServiceSoap)(this)).HelloWorld(inValue);
-            return retVal.Body.HelloWorldResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ClientWindowsForms.ProductServiceReference.HelloWorldResponse> ClientWindowsForms.ProductServiceReference.ProductServiceSoap.HelloWorldAsync(ClientWindowsForms.ProductServiceReference.HelloWorldRequest request) {
-            return base.Channel.HelloWorldAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ClientWindowsForms.ProductServiceReference.HelloWorldResponse> HelloWorldAsync() {
-            ClientWindowsForms.ProductServiceReference.HelloWorldRequest inValue = new ClientWindowsForms.ProductServiceReference.HelloWorldRequest();
-            inValue.Body = new ClientWindowsForms.ProductServiceReference.HelloWorldRequestBody();
-            return ((ClientWindowsForms.ProductServiceReference.ProductServiceSoap)(this)).HelloWorldAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ClientWindowsForms.ProductServiceReference.ProductListResponse ClientWindowsForms.ProductServiceReference.ProductServiceSoap.ProductList(ClientWindowsForms.ProductServiceReference.ProductListRequest request) {
+        ClientWindowsForms.ProductServiceReference.ProductListResponse ClientWindowsForms.ProductServiceReference.ProductServiceSoap.ProductList(ClientWindowsForms.ProductServiceReference.ProductListRequest request)
+        {
             return base.Channel.ProductList(request);
         }
-        
-        public System.Collections.Generic.List<ClientWindowsForms.ProductServiceReference.ProductDTO> ProductList() {
+
+        public ClientWindowsForms.ProductServiceReference.ProductDTO[] ProductList(ClientWindowsForms.ProductServiceReference.Identification Identification)
+        {
             ClientWindowsForms.ProductServiceReference.ProductListRequest inValue = new ClientWindowsForms.ProductServiceReference.ProductListRequest();
-            inValue.Body = new ClientWindowsForms.ProductServiceReference.ProductListRequestBody();
+            inValue.Identification = Identification;
             ClientWindowsForms.ProductServiceReference.ProductListResponse retVal = ((ClientWindowsForms.ProductServiceReference.ProductServiceSoap)(this)).ProductList(inValue);
-            return retVal.Body.ProductListResult;
+            return retVal.ProductListResult;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ClientWindowsForms.ProductServiceReference.ProductListResponse> ClientWindowsForms.ProductServiceReference.ProductServiceSoap.ProductListAsync(ClientWindowsForms.ProductServiceReference.ProductListRequest request) {
+        System.Threading.Tasks.Task<ClientWindowsForms.ProductServiceReference.ProductListResponse> ClientWindowsForms.ProductServiceReference.ProductServiceSoap.ProductListAsync(ClientWindowsForms.ProductServiceReference.ProductListRequest request)
+        {
             return base.Channel.ProductListAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<ClientWindowsForms.ProductServiceReference.ProductListResponse> ProductListAsync() {
+
+        public System.Threading.Tasks.Task<ClientWindowsForms.ProductServiceReference.ProductListResponse> ProductListAsync(ClientWindowsForms.ProductServiceReference.Identification Identification)
+        {
             ClientWindowsForms.ProductServiceReference.ProductListRequest inValue = new ClientWindowsForms.ProductServiceReference.ProductListRequest();
-            inValue.Body = new ClientWindowsForms.ProductServiceReference.ProductListRequestBody();
+            inValue.Identification = Identification;
             return ((ClientWindowsForms.ProductServiceReference.ProductServiceSoap)(this)).ProductListAsync(inValue);
         }
     }

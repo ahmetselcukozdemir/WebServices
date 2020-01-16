@@ -31,6 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btn_Product = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnCategory = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,11 +63,21 @@
             this.dataGridView1.Size = new System.Drawing.Size(894, 418);
             this.dataGridView1.TabIndex = 2;
             // 
+            // btnCategory
+            // 
+            this.btnCategory.Location = new System.Drawing.Point(255, 12);
+            this.btnCategory.Name = "btnCategory";
+            this.btnCategory.Size = new System.Drawing.Size(84, 42);
+            this.btnCategory.TabIndex = 3;
+            this.btnCategory.Text = "Kategoriler";
+            this.btnCategory.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 503);
+            this.Controls.Add(this.btnCategory);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_Product);
             this.Controls.Add(this.button1);
@@ -82,6 +93,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_Product;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnCategory;
     }
 }
 

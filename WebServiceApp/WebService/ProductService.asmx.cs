@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using System.Web.Services.Protocols;
 
 namespace WebService
 {
@@ -24,17 +25,27 @@ namespace WebService
             return "Hello World";
         }
 
+        public Identification Identification { get; set; }
         [WebMethod]
+        [SoapHeader("Identification")]
         public List<ProductDTO> ProductList()
         {
-            return context.Urunlers.Select(x => new ProductDTO
+            if (Identification.userName == "admin" && Identification.Password == "123")
             {
-                urunAd = x.urunAd,
-                urunMarka = x.urunMarka,
-                urunKategori = x.urunKategori,
-                urunFiyat = x.urunFiyat,
-                urunStok = x.urunStok
-            }).ToList();
+                return context.Urunlers.Select(x => new ProductDTO
+                {
+                    urunAd = x.urunAd,
+                    urunMarka = x.urunMarka,
+                    urunKategori = x.urunKategori,
+                    urunFiyat = x.urunFiyat,
+                    urunStok = x.urunStok
+                }).ToList();
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
+
