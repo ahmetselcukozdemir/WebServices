@@ -61,6 +61,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\TcknServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TcknDogrula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TcknDogrula.Designer.cs">
+      <DependentUpon>TcknDogrula.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,6 +84,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TcknDogrula.resx">
+      <DependentUpon>TcknDogrula.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -89,6 +103,10 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ProductServiceReference\ProductService.wsdl" />
+    <None Include="Service References\TcknServiceReference\ClientWindowsForms.TcknServiceReference.TCKimlikNoDogrulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TcknServiceReference\KPSPublic.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -98,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ProductServiceReference\" />
+    <WCFMetadataStorage Include="Service References\TcknServiceReference\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ProductServiceReference\configuration91.svcinfo" />
@@ -116,6 +135,18 @@
       <Project>{DB1169E4-0EE9-4CAE-B6D8-1C80A36538DB}</Project>
       <Name>WebService</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TcknServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TcknServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TcknServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
