@@ -10,6 +10,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientWindowsForms", "Clien
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{DB1169E4-0EE9-4CAE-B6D8-1C80A36538DB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceWCF", "ServiceWCF", "{AF8E2189-141F-4623-9763-488740B3F26E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceAppWCF", "ServiceAppWCF\ServiceAppWCF.csproj", "{07DE8088-5E85-4992-BFB5-C28EBC94469A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1EF28F80-225F-477C-9FCE-669526CA7585} = {1EF28F80-225F-477C-9FCE-669526CA7585}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService", "WcfService\WcfService.csproj", "{1EF28F80-225F-477C-9FCE-669526CA7585}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,8 +33,20 @@ Global
 		{DB1169E4-0EE9-4CAE-B6D8-1C80A36538DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB1169E4-0EE9-4CAE-B6D8-1C80A36538DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB1169E4-0EE9-4CAE-B6D8-1C80A36538DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07DE8088-5E85-4992-BFB5-C28EBC94469A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07DE8088-5E85-4992-BFB5-C28EBC94469A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07DE8088-5E85-4992-BFB5-C28EBC94469A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07DE8088-5E85-4992-BFB5-C28EBC94469A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EF28F80-225F-477C-9FCE-669526CA7585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EF28F80-225F-477C-9FCE-669526CA7585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF28F80-225F-477C-9FCE-669526CA7585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EF28F80-225F-477C-9FCE-669526CA7585}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{07DE8088-5E85-4992-BFB5-C28EBC94469A} = {AF8E2189-141F-4623-9763-488740B3F26E}
+		{1EF28F80-225F-477C-9FCE-669526CA7585} = {AF8E2189-141F-4623-9763-488740B3F26E}
 	EndGlobalSection
 EndGlobal
